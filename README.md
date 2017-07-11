@@ -437,6 +437,15 @@ This is a simple bot supporting inline mode.
 When using the bot in inline mode, it will provide three possible choices/results.
 After the choice is accomplished, the bot will send a customized message to the user.
 
+Check [sample/lena_inlineButton.php](https://github.com/CheatCoder/php-telegram-bot-library/blob/master/sample/lena_inlineButton.php) file for the commented source code.
+
+### Inline Button Bot ###
+
+This is a simple bot like Inline Bot.
+
+When using the bot Inline Button mode, it will provide buttons under the message.
+After a click the Button can stay or disapear, and the Bot will answer on the click.
+
 Check [sample/inline.php](https://github.com/auino/php-telegram-bot-library/blob/master/sample/inline.php) file for the commented source code.
 
 ### Real bots ###
@@ -459,4 +468,4 @@ Contact me to add your bot/channel to the list.
 
 You can find me on Twitter as [@auino](https://twitter.com/auino).
 
-You can find [CheatCoder](https://github.com/CheatCoder) on Telegram as [@Stefan_Sauer](https://telegram.me/Stefan_Sauer) or contact me on my website: sauer-nbg.de(https://sauer-nbg.de)
+You can find [CheatCoder](https://github.com/CheatCoder) on Telegram as [@Stefan_Sauer](https://telegram.me/Stefan_Sauer) or contact me on my website: https://sauer-nbg.de
