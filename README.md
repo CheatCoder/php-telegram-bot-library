@@ -115,7 +115,7 @@ For commands not starting with a `/` symbol, or not directly sent to the bot, [p
 
 The last `$state` parameter (optional, needed only if state machine functionality is enabled) identifies that the trigger is registered on the specified state, where `null` identifies the initial state and `"*"` identifies that the trigger has to be registered on each considered state.
 Alternatively, you can define a custom string identifying the prefered state.
-More information are given in the [State Machines section](https://github.com/auino/php-telegram-bot-library#state-machines).
+More information are given in the [State Machines section](https://github.com/CheatCoder/php-telegram-bot-library#state-machines).
 
 ##### Triggers Definition #####
 
@@ -162,7 +162,7 @@ Note that in this case the [privacy mode](https://core.telegram.org/bots#privacy
 
 The last `$state` parameter (optional, needed only if state machine functionality is enabled) identifies that the trigger is registered on the specified state, where `null` identifies the initial state and `"*"` identifies that the trigger has to be registered on each considered state.
 Alternatively, you can define a custom string identifying the prefered state.
-More information are given in the [State Machines section](https://github.com/auino/php-telegram-bot-library#state-machines).
+More information are given in the [State Machines section](https://github.com/CheatCoder/php-telegram-bot-library#state-machines).
 
 Also, it's possible to register a single generic trigger to use for each received command:
 
@@ -174,7 +174,7 @@ where the `$state` parameter is optional and `one_trigger_for_all` is the name o
 
 The last `$state` parameter (optional, needed only if state machine functionality is enabled) identifies that the trigger is registered on the specified state, where `null` identifies the initial state and `"*"` identifies that the trigger has to be registered on each considered state.
 Alternatively, you can define a custom string identifying the prefered state.
-More information are given in the [State Machines section](https://github.com/auino/php-telegram-bot-library#state-machines).
+More information are given in the [State Machines section](https://github.com/CheatCoder/php-telegram-bot-library#state-machines).
 
 Finally, it's possible to register a trigger to use if anything goes wrong:
 
@@ -186,9 +186,9 @@ where the `$state` parameter is optional and `trigger_err` is the name of the tr
 
 The last `$state` parameter (optional, needed only if state machine functionality is enabled) identifies that the trigger is registered on the specified state, where `null` identifies the initial state and `"*"` identifies that the trigger has to be registered on each considered state.
 Alternatively, you can define a custom string identifying the prefered state.
-More information are given in the [State Machines section](https://github.com/auino/php-telegram-bot-library#state-machines).
+More information are given in the [State Machines section](https://github.com/CheatCoder/php-telegram-bot-library#state-machines).
 
-If `$singletrigger=true` (see description in the [Instructions section](https://github.com/auino/php-telegram-bot-library#instructions)), accordingly to registration function names, the order of triggering is the following one: trigger_any, trigger_text_command, trigger_text_intext, trigger_error.
+If `$singletrigger=true` (see description in the [Instructions section](https://github.com/CheatCoder/php-telegram-bot-library#instructions)), accordingly to registration function names, the order of triggering is the following one: trigger_any, trigger_text_command, trigger_text_intext, trigger_error.
 
 ##### Non-Text Triggers #####
 
@@ -269,7 +269,7 @@ It is also possible to retrive a file from `$file_id` and store it to `$output_f
 $filename = get_file($file_id, $output_file)
 ```
 
-where `$file_id` is retrieved through `telegram_function_parameters` class methods (see [Triggers Definition](https://github.com/auino/php-telegram-bot-library#triggers-definition) section).
+where `$file_id` is retrieved through `telegram_function_parameters` class methods (see [Triggers Definition](https://github.com/CheatCoder/php-telegram-bot-library#triggers-definition) section).
 Returned value is the full `$filename` including file extension (computed by appending the extension to the `$output_file` parameter), `null` if something goes wrong.
 
 #### Automated Triggering ####
@@ -280,7 +280,7 @@ After the triggers have been configured (it's possible to set up multiple trigge
 $response = $ts->run($bot, $message);
 ```
 
-where `$message` is a Telegram [Message object](https://core.telegram.org/bots/api#message) (in the sample reported in [Instructions section](https://github.com/auino/php-telegram-bot-library#instructions), `$message = $data->message`).
+where `$message` is a Telegram [Message object](https://core.telegram.org/bots/api#message) (in the sample reported in [Instructions section](https://github.com/CheatCoder/php-telegram-bot-library#instructions), `$message = $data->message`).
 Returned `$response` object is an array of resulting values for the executed callbacks (which should be the result of a `logarray()` call).
 If `$response` is an empty array, nothing has been triggered.
 
@@ -325,7 +325,7 @@ $results = json_encode($results_array);
 $bot->send_inline($inline_query_id, $results);
 ```
 
-For a sample of usage of inline mode, see the [Inline Bot sample](https://github.com/auino/php-telegram-bot-library#inline-bot) below.
+For a sample of usage of inline mode, see the [Inline Bot sample](https://github.com/CheatCoder/php-telegram-bot-library#inline-bot) below.
 
 #### Logging ####
 
@@ -359,7 +359,7 @@ If the `chatid` parameter is empty, the message will be sent to each user.
 Access to `send.php` file should be protected, e.g., through basic authentication (see [Apache2 help on ServerFault](http://serverfault.com/a/151305)).
 
 This functionality makes use of the logging capabilities of the library.
-Therefore, if [logging](https://github.com/auino/php-telegram-bot-library#logging) is not enabled/supported, programmed message send will not work.
+Therefore, if [logging](https://github.com/CheatCoder/php-telegram-bot-library#logging) is not enabled/supported, programmed message send will not work.
 
 #### Retrieve chat identifier ####
 
@@ -395,7 +395,7 @@ Please consider that the `message` parameter should be [urlencoded](http://php.n
 ### Notes for who's upgrading ###
 
 Unlike previous versions of the library, the `$chatid` parameter is no more required in the `$ts->run()` function.
-Moreover, the `$text` parameter is replaced by a `$message` parameter, retrieved through `$data->message` (see [Instructions section](https://github.com/auino/php-telegram-bot-library#instructions)).
+Moreover, the `$text` parameter is replaced by a `$message` parameter, retrieved through `$data->message` (see [Instructions section](https://github.com/CheatCoder/php-telegram-bot-library#instructions)).
 
 ```php
 $response = $ts->run($bot, $message);
@@ -417,7 +417,7 @@ Here is the PHP code of two sample bots (check the `sample` directory and config
 
 This is a trivial bot simply returning a picture of [Lena](https://en.wikipedia.org/wiki/Lenna) when the `/lena` command is triggered.
 
-Check [sample/lena.php](https://github.com/auino/php-telegram-bot-library/blob/master/sample/lena.php) file for the commented source code.
+Check [sample/lena.php](https://github.com/CheatCoder/php-telegram-bot-library/blob/master/sample/lena.php) file for the commented source code.
 
 #### Write-to-Developer Bot ####
 
@@ -428,7 +428,7 @@ Considered states are:
  2. `"in_chat"` state, entered after `/start` command is executed; in this state, the bot is waiting for a command (`/help` and `/write` commands are accepted here)
  3. `"waiting_for_input"` state, accepting any input from the user, hence registering the message to a local file and entering back to the `"in_chat"` state
 
-Check [sample/writetodev.php](https://github.com/auino/php-telegram-bot-library/blob/master/sample/writetodev.php) file for the commented source code.
+Check [sample/writetodev.php](https://github.com/CheatCoder/php-telegram-bot-library/blob/master/sample/writetodev.php) file for the commented source code.
 
 #### Inline Bot ####
 
@@ -437,7 +437,7 @@ This is a simple bot supporting inline mode.
 When using the bot in inline mode, it will provide three possible choices/results.
 After the choice is accomplished, the bot will send a customized message to the user.
 
-Check [sample/lena_inlineButton.php](https://github.com/CheatCoder/php-telegram-bot-library/blob/master/sample/lena_inlineButton.php) file for the commented source code.
+Check [sample/inline.php](https://github.com/CheatCoder/php-telegram-bot-library/blob/master/sample/inline.php) file for the commented source code.
 
 ### Inline Button Bot ###
 
@@ -446,7 +446,7 @@ This is a simple bot like Inline Bot.
 When using the bot Inline Button mode, it will provide buttons under the message.
 After a click the Button can stay or disapear, and the Bot will answer on the click.
 
-Check [sample/inline.php](https://github.com/auino/php-telegram-bot-library/blob/master/sample/inline.php) file for the commented source code.
+Check [sample/lena_inlineButton.php](https://github.com/CheatCoder/php-telegram-bot-library/blob/master/sample/lena_inlineButton.php) file for the commented source code.
 
 ### Real bots ###
 
@@ -454,7 +454,7 @@ Following bots have been implemented through this library.
 
 * [@programmablebot](https://telegram.me/programmablebot)
 * [@italiawebcambot](https://telegram.me/italiawebcambot)
-* [@tabbythebot](https://telegram.me/tabbythebot) (channel reporting Daniele's bots; see [acknowledgements](https://github.com/auino/php-telegram-bot-library#acknowledgements))
+* [@tabbythebot](https://telegram.me/tabbythebot) (channel reporting Daniele's bots; see [acknowledgements](https://github.com/CheatCoder/php-telegram-bot-library#acknowledgements))
 
 Contact me to add your bot/channel to the list.
 
