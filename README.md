@@ -459,4 +459,4 @@ Contact me to add your bot/channel to the list.
 
 You can find me on Twitter as [@auino](https://twitter.com/auino).
 
-You can find [CheatCoder](https://github.com/CheatCoder) on Telegram as [@Loveless_sow](https://telegram.me/Loveless_sow).
+You can find [CheatCoder](https://github.com/CheatCoder) on Telegram as [@Stefan_Sauer](https://telegram.me/Stefan_Sauer) or contact me on my website: sauer-nbg.de(https://sauer-nbg.de)
